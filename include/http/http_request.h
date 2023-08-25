@@ -255,7 +255,10 @@ std::string HttpRequest::version() const {
 }
 
 std::string HttpRequest::getPost(const std::string& key) const {
-    assert(key != "");
+    
+    if(key == "") return "";
+
+    //解析出来Post数据,如果查到到则就返回,没有返回空值
     if(post_.count(key) == 1) {
         return post_.find(key)->second;
     }
