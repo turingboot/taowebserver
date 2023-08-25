@@ -89,13 +89,14 @@ bool HttpRequest::isKeepAlive() const {
 }
 
 bool HttpRequest::parse(Buffer& buff) {
+    //回车换行符
     const char CRLF[] = "\r\n";
+
+    //缓冲区没有可读的数据
     if(buff.readableBytes() <= 0) {
         return false;
     }
-    //std::cout<<"parse buff start:"<<std::endl;
-    //buff.printContent();
-    //std::cout<<"parse buff finish:"<<std::endl;
+
     while(buff.readableBytes() && state_ != FINISH) {
         const char* lineEnd = std::search(buff.curReadPtr(), buff.curWritePtrConst(), CRLF, CRLF + 2);
         std::string line(buff.curReadPtr(), lineEnd);
@@ -123,6 +124,7 @@ bool HttpRequest::parse(Buffer& buff) {
         if(lineEnd == buff.curWritePtr()) { break; }
         buff.updateReadPtrUntilEnd(lineEnd + 2);
     }
+    //解析成功
     return true;
 }
 
@@ -166,12 +168,14 @@ void HttpRequest::parseRequestHeader_(const std::string& line) {
     }
 }
 
+//解析请求数据体
 void HttpRequest::parseDataBody_(const std::string& line) {
     body_ = line;
     parsePost_();
     state_ = FINISH;
 }
 
+//十六进制转换
 int HttpRequest::convertHex(char ch) {
     if(ch >= 'A' && ch <= 'F') return ch -'A' + 10;
     if(ch >= 'a' && ch <= 'f') return ch -'a' + 10;
@@ -266,7 +270,9 @@ std::string HttpRequest::getPost(const std::string& key) const {
 }
 
 std::string HttpRequest::getPost(const char* key) const {
-    assert(key != nullptr);
+    
+    if(key == nullptr) return "";
+
     if(post_.count(key) == 1) {
         return post_.find(key)->second;
     }
