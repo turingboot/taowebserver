@@ -260,7 +260,7 @@ void TaoWebserver::onRead_(HttpConnection *client)
     int ret = -1;
     int readErrno = 0;
     ret = client->readBuffer(&readErrno);
-    // std::cout << ret << std::endl;
+   
     if (ret <= 0 && readErrno != EAGAIN)
     {
 
