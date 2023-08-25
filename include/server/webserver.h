@@ -233,21 +233,21 @@ void TaoWebserver::handleListen_()
 
 void TaoWebserver::handleRead_(HttpConnection *client)
 {
-    assert(client);
+   
     extentTime_(client);
     threadpool_->submit(std::bind(&TaoWebserver::onRead_, this, client));
 }
 
 void TaoWebserver::handleWrite_(HttpConnection *client)
 {
-    assert(client);
+    
     extentTime_(client);
     threadpool_->submit(std::bind(&TaoWebserver::onWrite_, this, client));
 }
 
 void TaoWebserver::extentTime_(HttpConnection *client)
 {
-    assert(client);
+  
     if (timeoutMS_ > 0)
     {
         timer_->update(client->getFd(), timeoutMS_);
@@ -256,7 +256,7 @@ void TaoWebserver::extentTime_(HttpConnection *client)
 
 void TaoWebserver::onRead_(HttpConnection *client)
 {
-    assert(client);
+    
     int ret = -1;
     int readErrno = 0;
     ret = client->readBuffer(&readErrno);
@@ -285,7 +285,7 @@ void TaoWebserver::onProcess_(HttpConnection *client)
 
 void TaoWebserver::onWrite_(HttpConnection *client)
 {
-    assert(client);
+   
     int ret = -1;
     int writeErrno = 0;
     ret = client->writeBuffer(&writeErrno);
@@ -381,7 +381,7 @@ bool TaoWebserver::initSocket_()
 
 int TaoWebserver::setFdNonblock(int fd)
 {
-    assert(fd > 0);
+    
     return fcntl(fd, F_SETFL, fcntl(fd, F_GETFD, 0) | O_NONBLOCK);
 }
 
