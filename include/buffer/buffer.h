@@ -79,6 +79,7 @@ private:
 
 Buffer::Buffer(int initBuffersize) : _buffer(initBuffersize), _readPos(0), _writePos(0) {}
 
+
 size_t Buffer::readableBytes() const
 {
     return _writePos - _readPos;
@@ -111,13 +112,14 @@ char *Buffer::curWritePtr()
 
 void Buffer::updateReadPtr(size_t len)
 {
-    assert(len <= readableBytes());
+
+    if(len <= readableBytes())
     _readPos += len;
 }
 
 void Buffer::updateReadPtrUntilEnd(const char *end)
 {
-    assert(end >= curReadPtr());
+   
     updateReadPtr(end - curReadPtr());
 }
 
