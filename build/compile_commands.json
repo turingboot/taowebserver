@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/root/acer/taowebserver/build",
+  "command": "/usr/bin/g++   -I../include  -g   -o CMakeFiles/taowebserver.dir/src/main.cpp.o -c /root/acer/taowebserver/src/main.cpp",
+  "file": "/root/acer/taowebserver/src/main.cpp"
+}
+]

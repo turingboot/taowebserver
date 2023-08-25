@@ -1,0 +1,19 @@
+# ninja log v5
+2	746	1691386235668588734	CMakeFiles/taowebserver.dir/src/log.cpp.o	67aa0a5767f6ea9a
+1	10269	1692863589275153283	CMakeFiles/taowebserver.dir/src/buffer.cpp.o	29f53dd5f6364038
+1	11561	1692459405096440886	CMakeFiles/taowebserver.dir/src/http_connection.cpp.o	dfbd903eadeede65
+1	11104	1692459742770983379	CMakeFiles/taowebserver.dir/src/http_request.cpp.o	b46d097f45efb3f9
+13259	26219	1692452207567737083	CMakeFiles/taowebserver.dir/src/http_response.cpp.o	d09f5ae83b9be16b
+1	1130	1691205597485111440	CMakeFiles/taowebserver.dir/src/http_conn.cpp.o	3e8381fd64981e64
+1360	2472	1691548062042582044	CMakeFiles/taowebserver.dir/src/lst_timer.cpp.o	a13f565968a9cf20
+2364	2586	1691383331175342256	../bin/taowebserver	2de88f8390f318ec
+1	1446	1691239722594369879	CMakeFiles/taowebserver.dir/src/httpConnection.cpp.o	1bcb58ecf91ac655
+13366	13844	1692865579894239533	../taowebserver	cf188260f2923791
+1	13366	1692865579402229749	CMakeFiles/taowebserver.dir/src/main.cpp.o	c848e3d810abdd4d
+16978	17923	1692452199286869686	CMakeFiles/taowebserver.dir/src/timer.cpp.o	7efb9990f720739a
+1	10049	1692459488738076123	CMakeFiles/taowebserver.dir/src/webserver.cpp.o	2364ea9734b0b3ff
+1	172	1692863579182952462	CMakeFiles/taowebserver.dir/src/epoller.cpp.o	ae6db90a0df9ff65
+1	13093	1692866499452503642	CMakeFiles/taowebserver.dir/src/main.cpp.o	c848e3d810abdd4d
+13093	13571	1692866499944513247	../taowebserver	cf188260f2923791
+1	13182	1692891256730335569	CMakeFiles/taowebserver.dir/src/main.cpp.o	c848e3d810abdd4d
+13183	13770	1692891257326347477	../taowebserver	cf188260f2923791

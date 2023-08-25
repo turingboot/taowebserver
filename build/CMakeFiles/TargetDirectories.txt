@@ -1,0 +1,5 @@
+/root/acer/taowebserver/build/CMakeFiles/edit_cache.dir
+/root/acer/taowebserver/build/CMakeFiles/package_source.dir
+/root/acer/taowebserver/build/CMakeFiles/rebuild_cache.dir
+/root/acer/taowebserver/build/CMakeFiles/package.dir
+/root/acer/taowebserver/build/CMakeFiles/taowebserver.dir
